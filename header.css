@@ -1,0 +1,95 @@
+/* Header Styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Allows the layout to adjust on smaller screens */
+}
+
+.logo img {
+    height: 40px; /* Adjust according to your logo size */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6f61; /* Color for hover effect */
+}
+
+.cta-button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e65c50; /* Slightly darker on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin-bottom: 15px;
+    }
+
+    .cta-button {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 30px; /* Adjust logo size for smaller screens */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Reduce font size on small screens */
+    }
+}

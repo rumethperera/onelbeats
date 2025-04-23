@@ -1,0 +1,237 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-bottom: 100px;
+    background-image: linear-gradient(135deg, #1e3c72, #2a5298); /* Luxury Gradient Background */
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Audio Player */
+audio {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    width: 320px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+    border: 2px solid #2a5298;
+}
+
+/* Header Section */
+h2.section-title {
+    text-align: center;
+    font-size: 4em;
+    color: #fff;
+    margin: 50px 0;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 60px 90px;
+}
+
+/* Song Gallery Section */
+.song-gallery {
+    padding: 80px 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Video Grid */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    width: 100%;
+}
+
+/* Video Item */
+.video-item {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.video-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.2);
+}
+
+/* Hover Overlay */
+.video-item:hover .video-wrapper {
+    filter: brightness(0.8);
+}
+
+/* Video Wrapper */
+.video-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+/* Video Embed */
+.video-wrapper iframe,
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 15px;
+}
+
+/* Song Details */
+.video-item-details {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    border-top: 1px solid #ddd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 0 0 15px 15px;
+}
+
+.video-item-details h4 {
+    font-size: 1.5em;
+    color: #2a5298;
+    font-weight: bold;
+}
+
+.video-item-details p {
+    color: #666;
+    font-size: 1.1em;
+}
+
+/* Search Bar */
+.search-bar {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.search-bar input {
+    width: 80%;
+    max-width: 600px;
+    padding: 15px 20px;
+    border: 2px solid #2a5298;
+    border-radius: 50px;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.search-bar input:focus {
+    border-color: #1e3c72;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    background-color: #1e3c72;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Luxury Icons Section */
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #2a5298;
+}
+
+/* Media Queries */
+@media (max-width: 1440px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .song-gallery {
+        padding: 40px 0;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h2.section-title {
+        font-size: 3em;
+    }
+
+    .video-item {
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-item {
+        margin-bottom: 20px;
+    }
+
+    .video-wrapper {
+        padding-top: 75%; /* 4:3 Aspect Ratio for small screens */
+    }
+
+    .song-name {
+        font-size: 1.2em;
+    }
+
+    .song-credits {
+        font-size: 1em;
+    }
+
+    h2.section-title {
+        font-size: 2.5em;
+    }
+}
+
+/* Luxury Background Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

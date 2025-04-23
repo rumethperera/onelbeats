@@ -1,0 +1,126 @@
+ /* Footer Styling */
+ footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.6;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    gap: 20px;
+}
+
+.footer-left, .footer-right {
+    width: 48%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-left p,
+.footer-right p {
+    margin: 5px 0;
+}
+
+footer p a {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+ul.social-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+ul.social-links li {
+    display: inline-block;
+}
+
+ul.social-links li a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+ul.social-links li a:hover {
+    color: #ff6f61;
+}
+
+/* Social Media Icons */
+.social-icon::before {
+    content: "";
+    display: inline-block;
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.social-icon.facebook::before {
+    background-image: url('facebook-icon.svg');
+}
+
+.social-icon.twitter::before {
+    background-image: url('twitter-icon.svg');
+}
+
+.social-icon.instagram::before {
+    background-image: url('instagram-icon.svg');
+}
+
+.social-icon.youtube::before {
+    background-image: url('youtube-icon.svg');
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    ul.social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 12px; /* Reduce font size on small screens */
+    }
+
+    .footer-left p,
+    .footer-right p {
+        font-size: 12px; /* Adjust paragraph font size */
+    }
+
+    ul.social-links li a {
+        font-size: 12px; /* Reduce icon text size */
+    }
+}
